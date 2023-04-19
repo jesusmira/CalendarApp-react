@@ -6,12 +6,13 @@ export const FabDelete = () => {
 
     const { startDeletingEvent, hasEventSelected } = useCalendarStore();
 
-    const handleDelete = () => {
+    const handleDelete = (event) => {
         startDeletingEvent();
     }
 
     return (
         <button
+            aria-label="btn-delete"
             onClick={ handleDelete }
             className="btn btn-danger fab-danger"
             style={{
